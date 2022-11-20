@@ -1,0 +1,34 @@
+public class Algoritmo {
+	int n = 6;
+	void organizar(int vetor[])
+	{
+	for (int i = 0; i < n-1; i++)
+	{
+	int minimo = i;
+	for (int j = i+1; j < n; j++)
+	if (vetor[j] < vetor[minimo])
+	minimo = j;
+	int temp = vetor[minimo];
+	vetor[minimo] = vetor[i];
+	vetor[i] = temp;
+	}
+	}
+
+	void printvetor(int vetor[])
+	{
+	for (int i=0; i<n; ++i)
+	System.out.print(vetor[i]+" ");
+	System.out.println();
+	}
+	public static void main(String args[])
+	{
+	Algoritmo ob = new Algoritmo();
+	int vetor[] = {15, 10, 99, 53, 36, 28};
+	System.out.println("Vetor desorganizado: ");
+	ob.printvetor(vetor);
+	ob.organizar(vetor);
+	System.out.println("Vetor organizado:");
+	ob.printvetor(vetor);
+	}
+
+}

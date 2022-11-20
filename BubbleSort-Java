@@ -1,0 +1,27 @@
+public class Algoritmo {
+	public static void main(String[] args) {	
+	int vetor[] = { 12,14 ,1 ,7 ,8 ,9};
+	int aux = 0;
+	int n = 0;
+	
+	System.out.println("Vetor desordenado: ");
+	for(n = 0; n < 6; n++) {
+		System.out.print(" " +vetor[n]);
+		
+	}
+	System.out.println(" ");
+	for(n = 0; n < 6; n++) {
+		for(int j = 0; j<5; j++){
+			if(vetor[j] > vetor[j + 1]){
+				aux = vetor[j];
+				vetor[j] = vetor[j+1];
+				vetor[j+1] = aux;
+	}
+		}
+	}
+	System.out.println("Vetor organizado:  ");
+	for(n= 0; n < 6; n++){
+		System.out.print(" "+vetor[n]);
+	}
+	}
+}
